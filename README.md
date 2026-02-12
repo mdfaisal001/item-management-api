@@ -63,7 +63,7 @@ com.faisal.itemapi
 ### Clone the repository
 
 ```
-git clone [(https://github.com/mdfaisal001/item-management-api.git)]
+git clone (https://github.com/mdfaisal001/item-management-api.git)
 cd itemapi
 ```
 
