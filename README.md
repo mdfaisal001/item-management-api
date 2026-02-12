@@ -1,21 +1,29 @@
 <h1 align="center">🚀 Item Management REST API</h1>
 
 <p align="center">
-A simple and clean Spring Boot REST API built with layered architecture.
+A clean and production-ready Spring Boot REST API built using layered architecture.
+</p>
+
+<p align="center">
+🌍 <strong>Live Demo:</strong>  
+https://item-management-api-eid8.onrender.com
 </p>
 
 ---
 
 ## 📌 Overview
 
-This project is a backend REST API built using Spring Boot.  
+This project is a backend REST API built using Spring Boot.
+
 It allows users to:
 
 - ➕ Add new items
 - 🔍 Retrieve item by ID
 - 📋 Retrieve all items
 
-Data is stored in-memory using an ArrayList.
+Data is currently stored in-memory using an `ArrayList`.
+
+The application is containerized with Docker and deployed on Render.
 
 ---
 
@@ -28,6 +36,8 @@ Data is stored in-memory using an ArrayList.
 | Maven | Build Tool |
 | REST API | API Design |
 | Jakarta Validation | Input Validation |
+| Docker | Containerization |
+| Render | Cloud Deployment |
 
 ---
 
@@ -58,31 +68,63 @@ com.faisal.itemapi
 
 ---
 
-## ▶️ How to Run
+## 🌍 Live API
+
+Base URL:
+
+```
+https://item-management-api-eid8.onrender.com
+```
+
+Example:
+
+```
+GET https://item-management-api-eid8.onrender.com/api/items
+```
+
+---
+
+## ▶️ Run Locally
 
 ### Clone the repository
 
-```
-git clone <your-repository-url>
-cd itemapi
+```bash
+git clone https://github.com/mdfaisal001/item-management-api.git
+cd item-management-api
 ```
 
 ### Run the application
 
 **Windows**
-```
+```bash
 .\mvnw spring-boot:run
 ```
 
 **Mac/Linux**
-```
+```bash
 ./mvnw spring-boot:run
 ```
 
 Application runs at:
 
 ```
-http://localhost:8070
+http://localhost:8080
+```
+
+---
+
+## 🐳 Run Using Docker
+
+Build the image:
+
+```bash
+docker build -t itemapi .
+```
+
+Run the container:
+
+```bash
+docker run -p 8080:8080 itemapi
 ```
 
 ---
@@ -181,12 +223,30 @@ Example:
 
 ---
 
+## 🚀 Deployment
+
+This application is:
+
+- Containerized using Docker
+- Built using multi-stage Docker build
+- Deployed on Render
+- Configured to use dynamic port binding via:
+
+```properties
+server.port=${PORT:8080}
+```
+
+Free-tier instances may spin down due to inactivity.
+
+---
+
 ## 🧠 Design Decisions
 
-- Used constructor-based dependency injection
-- Separated concerns into Controller, Service, and Model layers
-- Implemented input validation using Jakarta Validation
-- Used in-memory storage for simplicity (as per task requirement)
+- Constructor-based dependency injection
+- Layered architecture for separation of concerns
+- Validation using Jakarta Validation
+- In-memory storage for simplicity
+- Cloud-ready configuration
 
 ---
 
@@ -197,11 +257,12 @@ Example:
 - Add DTO pattern
 - Implement Global Exception Handling
 - Add Unit Testing
-- Add Docker support
 - Add JWT Authentication
+- Add Swagger/OpenAPI documentation
 
 ---
 
 ## 👨‍💻 Author
 
-Backend assessment project built using Spring Boot.
+Mohammed Faisal  
+Backend Developer | Java | Spring Boot
