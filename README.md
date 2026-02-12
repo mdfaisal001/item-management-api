@@ -63,7 +63,7 @@ com.faisal.itemapi
 ### Clone the repository
 
 ```
-git clone <your-repository-url>
+git clone [(https://github.com/mdfaisal001/item-management-api.git)]
 cd itemapi
 ```
 
@@ -82,7 +82,7 @@ cd itemapi
 Application runs at:
 
 ```
-http://localhost:8070
+http://localhost:8080
 ```
 
 ---
